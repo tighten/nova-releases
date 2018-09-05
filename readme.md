@@ -5,12 +5,14 @@
 
 JUST GETTING STARTED.
 
-<img width="332" alt="image" src="https://user-images.githubusercontent.com/151829/45109652-2993a300-b10e-11e8-8a5b-2daf36d901c0.png">
+<img width="332" alt="image" src="https://user-images.githubusercontent.com/151829/45116564-1e963e00-b121-11e8-8908-ed2a72e2b694.png">
+<img width="332" alt="image" src="https://user-images.githubusercontent.com/151829/45116575-27870f80-b121-11e8-88dd-84d17b94a729.png">
+
 
 Plans:
 
 - [x] Show the latest release on a card and compare it against yours
-- [ ] Add to the card a big icon to show green or red and a link to upgrade if you're red
+- [x] Add to the card a big icon to show green or red and a link to upgrade if you're red
 - [ ] Show all releases in a list in a tool
 
 ## Installation
