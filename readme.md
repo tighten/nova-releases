@@ -5,6 +5,8 @@
 
 JUST GETTING STARTED.
 
+<img width="332" alt="image" src="https://user-images.githubusercontent.com/151829/45109652-2993a300-b10e-11e8-8a5b-2daf36d901c0.png">
+
 Plans:
 
 - Show the latest release on a card and compare it against yours, with a big icon to show green or red and a link to upgrade if you're red
