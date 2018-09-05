@@ -9,8 +9,9 @@ JUST GETTING STARTED.
 
 Plans:
 
-- Show the latest release on a card and compare it against yours, with a big icon to show green or red and a link to upgrade if you're red
-- Show all releases in a list in a tool
+- [x] Show the latest release on a card and compare it against yours
+- [ ] Add to the card a big icon to show green or red and a link to upgrade if you're red
+- [ ] Show all releases in a list in a tool
 
 ## Installation
 
