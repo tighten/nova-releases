@@ -4,7 +4,7 @@ namespace Tightenco\NovaReleases;
 
 use Laravel\Nova\Card;
 
-class NovaReleases extends Card
+class LatestRelease extends Card
 {
     /**
      * The width of the card (1/3, 1/2, or full).
@@ -20,6 +20,6 @@ class NovaReleases extends Card
      */
     public function component()
     {
-        return 'nova-releases';
+        return 'nova-releases-latest';
     }
 }

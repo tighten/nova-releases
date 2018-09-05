@@ -76,7 +76,7 @@ module.exports = __webpack_require__(6);
 /***/ (function(module, exports, __webpack_require__) {
 
 Nova.booting(function (Vue, router) {
-    Vue.component('nova-releases', __webpack_require__(2));
+    Vue.component('nova-releases-latest', __webpack_require__(2));
 });
 
 /***/ }),
@@ -105,7 +105,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/js/components/Card.vue"
+Component.options.__file = "resources/js/components/LatestRelease.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -114,9 +114,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-b9bc2c0a", Component.options)
+    hotAPI.createRecord("data-v-5601d625", Component.options)
   } else {
-    hotAPI.reload("data-v-b9bc2c0a", Component.options)
+    hotAPI.reload("data-v-5601d625", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -249,12 +249,33 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['card'],
 
+    data: function data() {
+        return {
+            installed_version: null,
+            releases: [],
+            current_release_version: null
+        };
+    },
+
     mounted: function mounted() {
-        //
+        var _this = this;
+
+        Nova.request().get('/nova-vendor/nova-releases/releases').then(function (response) {
+            _this.releases = response.data.releases;
+            _this.current_release_version = response.data.current_version;
+        });
+
+        Nova.request().get('/nova-vendor/nova-releases/installed-version').then(function (response) {
+            _this.installed_version = response.data.installed_version;
+        });
     }
 });
 
@@ -271,9 +292,21 @@ var render = function() {
     { staticClass: "flex flex-col items-center justify-center" },
     [
       _c("div", { staticClass: "px-3 py-3" }, [
-        _c("h1", { staticClass: "text-center text-3xl text-80 font-light" }, [
-          _vm._v("Nova Releases")
-        ])
+        _c(
+          "h1",
+          { staticClass: "text-center text-3xl text-80 font-light mt-4 mb-4" },
+          [_vm._v("Nova Releases")]
+        ),
+        _vm._v(
+          "\n\n        Latest version: " + _vm._s(_vm.current_release_version)
+        ),
+        _c("br"),
+        _c("br"),
+        _vm._v(
+          "\n\n        Installed version: " + _vm._s(_vm.installed_version)
+        ),
+        _c("br"),
+        _c("br")
       ])
     ]
   )
@@ -284,7 +317,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-b9bc2c0a", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-5601d625", module.exports)
   }
 }
 

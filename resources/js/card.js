@@ -1,3 +1,3 @@
 Nova.booting((Vue, router) => {
-    Vue.component('nova-releases', require('./components/Card'));
+    Vue.component('nova-releases-latest', require('./components/LatestRelease'));
 })
