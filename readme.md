@@ -31,7 +31,7 @@ public function cards()
 {
     return [
         // ...
-        new \Tightenco\NovaReleases\NovaCheckLatestRelease,
+        new \Tightenco\NovaReleases\LatestRelease,
     ];
 }
 ```
