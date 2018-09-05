@@ -253,6 +253,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['card'],
@@ -276,6 +283,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         Nova.request().get('/nova-vendor/nova-releases/installed-version').then(function (response) {
             _this.installed_version = response.data.installed_version;
         });
+    },
+
+
+    computed: {
+        outOfDate: function outOfDate() {
+            return this.installed_version !== this.current_release_version;
+        },
+        loaded: function loaded() {
+            return this.installed_version !== null && this.current_release_version !== null;
+        }
     }
 });
 
@@ -291,23 +308,78 @@ var render = function() {
     "card",
     { staticClass: "flex flex-col items-center justify-center" },
     [
-      _c("div", { staticClass: "px-3 py-3" }, [
-        _c(
-          "h1",
-          { staticClass: "text-center text-3xl text-80 font-light mt-4 mb-4" },
-          [_vm._v("Nova Releases")]
-        ),
-        _vm._v(
-          "\n\n        Latest version: " + _vm._s(_vm.current_release_version)
-        ),
-        _c("br"),
-        _c("br"),
-        _vm._v(
-          "\n\n        Installed version: " + _vm._s(_vm.installed_version)
-        ),
-        _c("br"),
-        _c("br")
-      ])
+      _c(
+        "a",
+        {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: _vm.loaded,
+              expression: "loaded"
+            }
+          ],
+          staticClass:
+            "px-3 py-4 flex flex-col items-center no-underline text-80",
+          attrs: { href: "https://nova.laravel.com/releases", target: "_blank" }
+        },
+        [
+          _c("h2", { staticClass: "text-center text-2xl text-80 font-light" }, [
+            _c("span", { staticClass: "pb-4" }, [_vm._v("Nova Release")]),
+            _vm._v(" "),
+            _vm.outOfDate
+              ? _c(
+                  "svg",
+                  {
+                    staticClass:
+                      "align-middle fill-current text-warning w-8 h-8 ml-2",
+                    attrs: {
+                      xmlns: "http://www.w3.org/2000/svg",
+                      viewBox: "0 0 512 512"
+                    }
+                  },
+                  [
+                    _c("path", {
+                      attrs: {
+                        d:
+                          "M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+                      }
+                    })
+                  ]
+                )
+              : _c(
+                  "svg",
+                  {
+                    staticClass:
+                      "align-middle fill-current text-info w-8 h-8 ml-2",
+                    attrs: {
+                      xmlns: "http://www.w3.org/2000/svg",
+                      viewBox: "0 0 512 512"
+                    }
+                  },
+                  [
+                    _c("path", {
+                      attrs: {
+                        d:
+                          "M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                      }
+                    })
+                  ]
+                )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "mt-4" }, [
+            _c("span", { staticClass: "text-70" }, [_vm._v("Latest:")]),
+            _vm._v(" "),
+            _c("span", { class: { "text-90": _vm.outOfDate } }, [
+              _vm._v("v" + _vm._s(_vm.current_release_version))
+            ]),
+            _vm._v("\n            |\n            "),
+            _c("span", { staticClass: "text-70" }, [_vm._v("Installed:")]),
+            _vm._v(" v" + _vm._s(_vm.installed_version) + "\n        ")
+          ])
+        ]
+      )
     ]
   )
 }
