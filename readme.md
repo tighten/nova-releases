@@ -5,8 +5,8 @@
 
 JUST GETTING STARTED.
 
-<img width="332" alt="image" src="https://user-images.githubusercontent.com/151829/45116564-1e963e00-b121-11e8-8908-ed2a72e2b694.png">
-<img width="332" alt="image" src="https://user-images.githubusercontent.com/151829/45116575-27870f80-b121-11e8-88dd-84d17b94a729.png">
+<img width="334" alt="image" src="https://user-images.githubusercontent.com/151829/45116564-1e963e00-b121-11e8-8908-ed2a72e2b694.png">
+<img width="322" alt="image" src="https://user-images.githubusercontent.com/151829/45116575-27870f80-b121-11e8-88dd-84d17b94a729.png">
 
 
 Plans:
