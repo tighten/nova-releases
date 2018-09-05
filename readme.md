@@ -14,6 +14,8 @@ Plans:
 - [x] Show the latest release on a card and compare it against yours
 - [x] Add to the card a big icon to show green or red and a link to upgrade if you're red
 - [ ] Show all releases in a list in a tool
+- [ ] Add a danger state if there are security issues, maybe? or something clever like that?
+
 
 ## Installation
 
