@@ -260,6 +260,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['card'],
@@ -325,7 +326,13 @@ var render = function() {
         },
         [
           _c("h2", { staticClass: "text-center text-2xl text-80 font-light" }, [
-            _c("span", { staticClass: "pb-4" }, [_vm._v("Nova Release")]),
+            _vm.outOfDate
+              ? _c("span", { staticClass: "pb-4" }, [
+                  _vm._v("Nova is out of date")
+                ])
+              : _c("span", { staticClass: "pb-4" }, [
+                  _vm._v("Nova is up to date")
+                ]),
             _vm._v(" "),
             _vm.outOfDate
               ? _c(
