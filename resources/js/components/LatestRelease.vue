@@ -48,6 +48,6 @@ export default {
         loaded: function () {
             return (this.installed_version !== null && this.current_release_version !== null);
         }
-    }
+    },
 }
 </script>

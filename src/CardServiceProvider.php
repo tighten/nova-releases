@@ -7,6 +7,7 @@ use Laravel\Nova\Events\ServingNova;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
+// @todo can rename CardandTool?
 class CardServiceProvider extends ServiceProvider
 {
     /**
@@ -16,13 +17,14 @@ class CardServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'nova-releases');
+
         $this->app->booted(function () {
             $this->routes();
         });
 
         Nova::serving(function (ServingNova $event) {
             Nova::script('nova-releases', __DIR__.'/../dist/js/card.js');
-            Nova::style('nova-releases', __DIR__.'/../dist/css/card.css');
         });
     }
 
