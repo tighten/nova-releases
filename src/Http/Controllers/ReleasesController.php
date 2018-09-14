@@ -2,10 +2,11 @@
 
 namespace Tightenco\NovaReleases\Http\Controllers;
 
-use Zttp\Zttp;
+use Parsedown;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Cache;
+use Zttp\Zttp;
 
 class ReleasesController extends Controller
 {
