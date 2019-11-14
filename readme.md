@@ -1,3 +1,5 @@
+![Nova-Releases Logo](https://raw.githubusercontent.com/tightenco/nova-releases/master/nova-releases-banner.png)
+
 # Keep up on Nova releases
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/tightenco/nova-releases.svg?style=flat-square)](https://packagist.org/packages/tightenco/nova-releases)
