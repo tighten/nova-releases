@@ -8,6 +8,7 @@
     "license": "MIT",
     "require": {
         "php": ">=7.1.0",
+        "erusev/parsedown": "^1.7",
         "kitetail/zttp": "^0.6"
     },
     "autoload": {
