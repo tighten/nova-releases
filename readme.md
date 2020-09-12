@@ -5,8 +5,6 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/tightenco/nova-releases.svg?style=flat-square)](https://packagist.org/packages/tightenco/nova-releases)
 [![Total Downloads](https://img.shields.io/packagist/dt/tightenco/nova-releases.svg?style=flat-square)](https://packagist.org/packages/tightenco/nova-releases)
 
-JUST GETTING STARTED.
-
 The card:
 
 <img width="396" alt="screen shot 2018-09-06 at 12 13 19 am" src="https://user-images.githubusercontent.com/151829/45134868-a18fb680-b16a-11e8-98c4-f5583c6009da.png">
@@ -15,14 +13,6 @@ The card:
 The tool:
 
 <img width="1256" alt="screen shot 2018-09-10 at 12 07 39 am" src="https://user-images.githubusercontent.com/151829/45276011-e62e9100-b48d-11e8-8217-481f999f9521.png">
-
-
-Plans:
-
-- [x] Show the latest release on a card and compare it against yours
-- [x] Add to the card a big icon to show green or red and a link to upgrade if you're red
-- [x] Show all releases in a list in a tool
-- [ ] Add a danger state if there are security issues, maybe? or something clever like that?
 
 
 ## Installation
