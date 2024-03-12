@@ -7,7 +7,7 @@
     ],
     "license": "MIT",
     "require": {
-        "laravel/framework": ">=7.0",
+        "laravel/framework": ">=8.0",
         "erusev/parsedown": "^1.7",
         "php": ">=7.2.5"
     },
